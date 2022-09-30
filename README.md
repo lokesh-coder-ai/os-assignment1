@@ -2,27 +2,27 @@
 
 
 
-# Getting the latest version of Linux Kernel source code.
+# Getting the latest version of Linux Kernel source code from kernel.org.
 
 $ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.19.7.tar.xz
 
 
-# Extract the tar.xz file that we downloaded.
+# Extracting the tar file that we downloaded.
 
 $ tar -xf linux-5.19.7.tar.xz
 
 
-# Switch to linux directory.
+# Switching to linux (that we installed) directory.
 
 $ cd linux-5.19.7
 
 
-# Configuring the features and modules of linux kernel.
+# Configuring the features  of linux kernel.
 
 $ cp /boot/config-$(uname -r) .config
 
 
-# Install the required compilers and tools.
+# Installing the required dependencies.
 
 $ sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
 
@@ -37,17 +37,17 @@ $ make menuconfig
 $ make -j 4
 
 
-# Installing kernel modules
+# Installing the kernel modules
 
 $ sudo make modules_install
 
 
-# Install the compiled kernel
+# Installing the compiled kernel
 
 $ sudo make install
 
 
-# Showing the latest kernel installed.
+# Showing the latest kernel that we installed.
 
 $ uname -r
 
